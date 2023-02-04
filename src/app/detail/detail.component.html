@@ -1,0 +1,23 @@
+<div class="d-flex">
+    <!-- <button routerLink="/">
+        <i class="fa-sharp fa-solid fa-arrow-left"></i>
+    </button> -->
+    <button (click)="goBack()">
+        <i class="fa-sharp fa-solid fa-arrow-left"></i>
+    </button>
+    <h1>{{ movie?.titre }}</h1>
+    <!--  movie?.titre <=> va chercher mon objet quand il sera initalisé -->
+</div>
+
+<div class="row">
+    <div class="col">
+        <h2>Date de sortie: </h2>
+        <p>{{ movie?.date | date:"dd/MM/yyyy"}}</p>
+        <iframe width="560" height="315" [src]="videoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div>{{ movie?.resume }}</div>
+    </div>
+
+    <app-comment-form></app-comment-form>
+</div>
+
+

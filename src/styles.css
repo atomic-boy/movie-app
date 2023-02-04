@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body {
+    background:rgb(41, 40, 40);
+    font-family: 'Titillium Web', sans-serif;
+    color:rgb(229, 224, 224);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(229, 224, 224);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

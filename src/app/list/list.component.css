@@ -1,0 +1,14 @@
+div.card {
+    border:none;
+}
+
+
+div.card-body {
+    background: #19152f;
+}
+
+div.card h2 {
+    color: white;
+    /* taille relative par rapport à la font size du parent (càd du body) */
+    font-size: 1em;
+}

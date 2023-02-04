@@ -1,0 +1,9 @@
+<!-- type="text" permet dans la version mobile d'ouvrir le clavier
+type="tel" permet dans la version mobile d'ouvrir le clavier numérique -->
+<input #UserInput (focusout)="cleanListResult()" (keyup)="onKeyupInput(UserInput.value)" type="text" class="form-control" placeholder="je veux mater...">
+<ul>
+    <!-- *ngfor qui affiche les li -->
+    <li *ngFor="let movie of searchedMovies" (clic)="goMovieDetails(movie.id)" >
+        {{ movie.titre }} ({{ movie.date | date:'y'}})
+    </li>
+</ul>

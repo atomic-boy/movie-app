@@ -1,0 +1,10 @@
+div {
+    position: fixed; 
+    bottom: 0;
+    /* reste collé en bas même en scrollant */
+
+    text-align: center;
+    width: calc(100% - 24px);
+    padding: 7px;
+    background: rgba(0, 0, 0, 0.6); /* bg noire avec opacité à 0,7 */
+}

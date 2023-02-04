@@ -1,0 +1,26 @@
+<div class="row justify-content-center">
+
+    <h1>Connexion</h1>
+
+    <form class="col-12 col-md-6" [formGroup]="loginForm" (submit)="onSubmit()">
+
+        <label class="form-label">Email</label>
+        <input class="form-control" formControlName="email" type="text" placeholder="john@doe.com">
+        <p *ngIf="loginForm.touched && loginForm.controls['email'].errors?.['required']" style="color:yellow">Champs requis</p>
+        <p *ngIf="loginForm.touched && loginForm.controls['email'].errors?.['email']" style="color:yellow">Veuillez saisir un email valide</p>
+        <!-- loginForm.touched permet de déclencher la vérification d'erreur une fois que je sors du périmètre du formulaire avec la souris -->
+
+        <label class="form-label">Mot de passe</label>
+        <input class="form-control" formControlName="password" type="password">
+        <!-- <p *ngIf="loginForm.controls['password'].errors?.['required']" style="color:yellow">Mot de passe requis</p> -->
+        <p *ngIf="loginForm.controls['password'].dirty && loginForm.controls['password'].hasError('required')" style="color:yellow">Mot de passe requis</p>
+        <!-- loginForm.controls['password'].dirty permet de ne vérifier le champ une fois que sa valeur initiale a été modifiée -->
+
+        <!-- par defaut ce sera ce bouton (sans attribut type) qui sera utilisé pour le submit -->
+        <button class="btn btn-primary mt-2">Se connecter</button>
+
+        <!-- si on veut un bouton qui ne déclenche pas le submit il faut préciser le type-->
+        <!-- <button type="button">Bouton non lié au Submit du formulaire</button> -->
+    </form>
+
+</div>
